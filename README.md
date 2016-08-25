@@ -149,7 +149,7 @@ So let's update our `User` model to use bcrypt:
     end
 ```
 
-Our `users.password_digest` column actually stores two values: the salt, and the actual return value of BCrypt. We just concat them together in the column, and use our knowledge of the length of salts—generate_salt always produces 29 character strings—to separate them.
+Our `users.password_digest` column actually stores two values: the salt and the actual return value of BCrypt. We just concat them together in the column, and use our knowledge of the length of salts—generate_salt always produces 29 character strings—to separate them.
 
 After we've loaded the User, we find the salt which we previously stored in their `password_digest` column. We run the password we were given in `params` through BCrypt, along with the salt we read from the database. If the results match, you're in. If they don't, no dice.
 
