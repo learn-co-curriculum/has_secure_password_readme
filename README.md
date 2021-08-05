@@ -214,10 +214,6 @@ class User < ActiveRecord::Base
 end
 ```
 
-## Video Review
-
-- [Authentication](https://www.youtube.com/watch?v=gB7lYvfL4J4)
-
 ## Resources
 
 - [Wikipedia — Murmur Hash][murmur]
